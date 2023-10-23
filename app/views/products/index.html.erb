@@ -1,0 +1,19 @@
+#<%= @products.inspect %>
+<section id="main" class="container">
+  <p class="lead">Clothing Available for Purchase</p>
+  <table class="table">
+    <thead>
+    <tr>
+        <th>Size</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <% @products.each do |product| %>
+      <tr class="product">
+       
+        <td><%= product.size %>
+        <td><%= number_to_currency(product.price) %>
+      </tr>
+    <% end %>
+  </table>
+</section>
