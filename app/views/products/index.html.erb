@@ -4,13 +4,14 @@
   <table class="table">
     <thead>
     <tr>
+        
         <th>Size</th>
         <th>Price</th>
     </tr>
     </thead>
     <% @products.each do |product| %>
       <tr class="product">
-       
+        <td><img src="<%= product.photo %>"></td>
         <td><%= product.size %>
         <td><%= number_to_currency(product.price) %>
       </tr>
