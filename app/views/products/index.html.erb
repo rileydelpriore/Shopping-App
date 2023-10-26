@@ -4,9 +4,9 @@
   <table class="table">
     <thead>
     <tr>
-        
-        <th>Size</th>
-        <th>Price</th>
+        <th>Image</th>
+        <th><%= link_to "Size", products_path(sort: "size") %></th>
+        <th><%= link_to "Price", products_path(sort: "price") %></th>
     </tr>
     </thead>
     <% @products.each do |product| %>

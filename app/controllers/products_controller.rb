@@ -3,7 +3,8 @@
 # Controller for clothing products
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    session[:sort] = params[:sort] || session[:sort]
+    @products = Product.sorted_by(session[:sort])
   end
 
   def show
