@@ -1,0 +1,27 @@
+<h1>Products#show</h1>
+<p>Find me in app/views/products/show.html.erb</p>
+<%= @product.inspect %>
+<section id="main" class="container">
+
+
+  <p class="lead">Product details %></p>
+  <dl>
+    <dt>Description
+      <dd><%= @product.description %>
+    <dt>Size
+      <dd><%= @product.size %>
+    <dt>Condition
+      <dd><%= @product.condition %>
+    <dt>Brand
+      <dd><%= @product.brand %>
+    <dt>Price
+      <dd><%= @product.price %>
+    <dt>Original Price
+      <dd><%= @product.original_price %>
+    <dt>Seller
+      <dd><%= @product.seller %>
+  </dl>
+
+  <%= link_to "Back to products list", products_path, class: "btn btn-primary" %>
+
+</section>
