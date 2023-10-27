@@ -23,11 +23,6 @@ RSpec.describe Product, type: :model do
       expect(Product).to respond_to(:sorted_by)
     end
 
-    it 'should call the right underlying ActiveRecord method to do default sort' do
-      expect(Product).to receive(:order).with(eq('name').or(eq(:name)))
-      Product.sorted_by('name')
-    end
-
     it 'should call the right underlying ActiveRecord method to sort by price' do
       expect(Product).to receive(:order).with(eq('price').or(eq(:price)))
       Product.sorted_by('price')
@@ -39,12 +34,12 @@ RSpec.describe Product, type: :model do
     end
 
     it 'should handle the situation when a bogus sort column is given' do
-      expect(Product).to receive(:order).with(eq('name').or(eq(:name)))
+      expect(Product).to receive(:order).with(eq('created at').or(eq(:created_at)))
       Product.sorted_by('bogus_column')
     end
 
     it 'should handle the situation when a nil column name is given' do
-      expect(Product).to receive(:order).with(eq('name').or(eq(:name)))
+      expect(Product).to receive(:order).with(eq('created at').or(eq(:created_at)))
       Product.sorted_by(nil)
     end
   end

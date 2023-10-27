@@ -1,0 +1,8 @@
+<div class="container">
+<%# in app/views/products/new.html.erb %>
+<%= form_with model: @product do |product_form| %>
+
+  <%= render partial: 'form_template', locals: {product_form: product_form} %>
+
+<% end %>
+</div>
