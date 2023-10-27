@@ -1,0 +1,39 @@
+<% if @product.errors.any? %>
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(@product.errors.count, "error") %> prevented
+    this item from being uploaded:
+  </h2>
+  <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<%= product_form.label :description %>
+<%= product_form.text_field :description %>
+<br>
+
+<%= product_form.label :size %>
+<%= product_form.text_field :size %>
+<br>
+
+<%= product_form.label :condition %>
+<%= product_form.text_field :condition %>
+<br>
+
+<%= product_form.label :brand %>
+<%= product_form.text_field :brand %>
+<br>
+
+<%= product_form.label :price %>
+<%= product_form.number_field :price, step: 0.01 %>
+<br>
+
+<%= product_form.label :original_price %>
+<%= product_form.number_field :original_price, step: 0.01 %>
+<br>
+
+<%= product_form.submit %>

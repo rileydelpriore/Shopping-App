@@ -6,8 +6,7 @@ class Product < ApplicationRecord
     field = field.to_s
     if %w[size price].include?(field)
       Product.order(field.to_sym)
-    else
-      Product.order(:created_at)
     end
+    Product.order("created_at DESC")
   end
 end
