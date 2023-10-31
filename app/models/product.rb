@@ -2,11 +2,12 @@
 
 # Product Model
 class Product < ApplicationRecord
+
   def self.sorted_by(field)
-    field = field.to_s
-    if %w[size price].include?(field)
-      Product.order(field.to_sym)
+    if column_names.include?(field)
+      Product.order(field)
+    else
+      Product.order(created_at: :desc)
     end
-    Product.order("created_at DESC")
   end
 end

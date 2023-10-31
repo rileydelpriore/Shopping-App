@@ -10,8 +10,8 @@ RSpec.feature 'ShowRequests', type: :feature do
       Product.create!(description: 'FakePants', size: 'L', condition: 'New', brand: 'Target', price: 10.00,
                       original_price: 20.00, seller: 'Chase')
     end
-  
-    it "should show product details" do
+
+    it 'should show product details' do
       visit product_path(1)
       expect(page.text).to match(/FakeShirt/)
       expect(page.text).to match(/L/)
@@ -21,5 +21,5 @@ RSpec.feature 'ShowRequests', type: :feature do
       expect(page.text).to match(/20\.00/)
       expect(page.text).to match(/Chase/)
     end
-  end 
+  end
 end
