@@ -1,14 +1,21 @@
 #<%= @products.inspect %>
 <section id="main" class="container">
-  <p class="lead">Clothing Available for Purchase</p>
+  <h1 class="lead">Clothing Available for Purchase</p>
+  <%= form_tag products_path, method: :get do %>
+    <%= select_tag :sort_by, options_for_select(['Price: Low to High', 'Price: High to Low', 'Size: Small to Large', 'Size: Large to Small', 'Newest'],session[:sort]) %>
+    <%= submit_tag 'Sort' %>
+  <% end %>
+
   <table class="table">
     <thead>
     <tr>
         <th>Image</th>
-        <th><%= link_to "Size", products_path(sort: "size") %></th>
-        <th><%= link_to "Price", products_path(sort: "price") %></th>
+        <th>Size</th>
+        <th>Price</th>
     </tr>
     </thead>
+  
+
     <% @products.each do |product| %>
       <tr class="product">
         <td><img src="<%= product.photo %>"></td>

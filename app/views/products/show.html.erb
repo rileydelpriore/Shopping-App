@@ -1,10 +1,10 @@
 <h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+
 <%= @product.inspect %>
 <section id="main" class="container">
 
 
-  <p class="lead">Product details %></p>
+  <h4 class="lead">Product details </p>
   <dl>
     <dt>Description
       <dd><%= @product.description %>
@@ -15,9 +15,11 @@
     <dt>Brand
       <dd><%= @product.brand %>
     <dt>Price
-      <dd><%= @product.price %>
+      <dd><%= number_to_currency(@product.price) %>
     <dt>Original Price
-      <dd><%= @product.original_price %>
+      <dd><%= number_to_currency(@product.original_price) %>
+    <dt> Discount 
+      <dd> <%=  @product.discount?.to_i %> % off!
     <dt>Seller
       <dd><%= @product.seller %>
   </dl>
