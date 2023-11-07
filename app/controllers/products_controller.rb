@@ -20,6 +20,13 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:notice] = 'Product successfully deleted'
+    redirect_to products_path
+  end
+
   def create
     @product = Product.new(create_update_params)
 
