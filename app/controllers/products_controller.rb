@@ -22,6 +22,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(create_update_params)
+
+    @product.photo.attach(params[:product][:photo]) if params[:product][:photo].present?
+
     if @product.save
       flash[:notice] = 'Item successfully uploaded'
       redirect_to products_path and return
@@ -34,6 +37,6 @@ class ProductsController < ApplicationController
   private
 
   def create_update_params
-    params.require(:product).permit(:description, :size, :condition, :brand, :price, :original_price)
+    params.require(:product).permit(:description, :size, :condition, :brand, :price, :original_price, :photo)
   end
 end

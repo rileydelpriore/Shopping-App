@@ -1,13 +1,11 @@
-<h1>Products#show</h1>
+<h1><%= @product.description %></h1>
 
-<%= @product.inspect %>
 <section id="main" class="container">
 
-
+  <div class="left-side">
   <h4 class="lead">Product details </p>
   <dl>
-    <dt>Description
-      <dd><%= @product.description %>
+
     <dt>Size
       <dd><%= @product.size %>
     <dt>Condition
@@ -23,6 +21,14 @@
     <dt>Seller
       <dd><%= @product.seller %>
   </dl>
+</div>
+<div class="right-side">
+  <% if @product.photo.attached? %>
+    <%= image_tag @product.photo, class: "right-side-image" %>
+  <% else %>
+    <%= image_tag 'download.png', class: "right-side-image" %>
+  <% end %>
+</div>
 
   <%= link_to "Back to products list", products_path, class: "btn btn-primary" %>
 

@@ -37,5 +37,7 @@
 <%= product_form.label :original_price %>
 <%= product_form.number_field :original_price, step: 0.01 %>
 <br>
-
+<%= product_form.label :photo %>
+<%= product_form.file_field :photo %>
+<br>
 <%= product_form.submit %>

@@ -2,6 +2,10 @@
 
 # Product Model
 class Product < ApplicationRecord
+  validates :description, :size, :condition, :brand, :price, :original_price, presence: true
+
+  has_one_attached :photo
+
   def self.sorted_by(field)
     case field
     when 'Price: Low to High'
@@ -20,6 +24,6 @@ class Product < ApplicationRecord
   end
 
   def discount?
-    (price / original_price) * 100
+    100 - (price / original_price) * 100
   end
 end
