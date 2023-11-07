@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ .product-image {
+    width: 120px;
+  }
+
+  .right-side-image {
+    width: 300px;
+  }
+
+  .right-side {
+    float: right;
+  }

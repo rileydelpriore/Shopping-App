@@ -3,8 +3,13 @@
 # Controller for clothing products
 class ProductsController < ApplicationController
   def index
-    session[:sort] = params[:sort] || session[:sort]
-    @products = Product.sorted_by(session[:sort])
+    @products = Product.all
+    if params[:sort_by].present?
+      session[:sort_by] = params[:sort_by]
+      @products = Product.sorted_by(session[:sort_by])
+    elsif session[:sort_by].present?
+      @products = Product.sorted_by(session[:sort_by])
+    end
   end
 
   def show
@@ -15,8 +20,18 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:notice] = 'Product successfully deleted'
+    redirect_to products_path
+  end
+
   def create
     @product = Product.new(create_update_params)
+
+    @product.photo.attach(params[:product][:photo]) if params[:product][:photo].present?
+
     if @product.save
       flash[:notice] = 'Item successfully uploaded'
       redirect_to products_path and return
@@ -29,6 +44,6 @@ class ProductsController < ApplicationController
   private
 
   def create_update_params
-    params.require(:product).permit(:description, :size, :condition, :brand, :price, :original_price)
+    params.require(:product).permit(:description, :size, :condition, :brand, :price, :original_price, :photo)
   end
 end

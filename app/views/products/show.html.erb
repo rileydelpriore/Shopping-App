@@ -1,13 +1,11 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
-<%= @product.inspect %>
+<h1><%= @product.description %></h1>
+
 <section id="main" class="container">
 
-
-  <p class="lead">Product details %></p>
+  <div class="left-side">
+  <h4 class="lead">Product details </p>
   <dl>
-    <dt>Description
-      <dd><%= @product.description %>
+
     <dt>Size
       <dd><%= @product.size %>
     <dt>Condition
@@ -15,13 +13,26 @@
     <dt>Brand
       <dd><%= @product.brand %>
     <dt>Price
-      <dd><%= @product.price %>
+      <dd><%= number_to_currency(@product.price) %>
     <dt>Original Price
-      <dd><%= @product.original_price %>
+      <dd><%= number_to_currency(@product.original_price) %>
+    <dt> Discount 
+      <dd> <%=  @product.discount?.to_i %> % off!
     <dt>Seller
       <dd><%= @product.seller %>
   </dl>
+</div>
+<div class="right-side">
+  <% if @product.photo.attached? %>
+    <%= image_tag @product.photo, class: "right-side-image" %>
+  <% else %>
+    <%= image_tag 'download.png', class: "right-side-image" %>
+  <% end %>
+</div>
 
-  <%= link_to "Back to products list", products_path, class: "btn btn-primary" %>
+
+<%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary" %>
+<br>
+<%= button_to "Delete this product", product_path(@product), method: :delete, class: "btn btn-danger" %>
 
 </section>

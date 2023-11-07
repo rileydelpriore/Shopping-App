@@ -16,12 +16,14 @@
 <%= product_form.text_field :description %>
 <br>
 
+
+
 <%= product_form.label :size %>
-<%= product_form.text_field :size %>
+<%= product_form.select :size, ['S', 'M', 'L'] %>
 <br>
 
 <%= product_form.label :condition %>
-<%= product_form.text_field :condition %>
+<%= product_form.select :condition, ['New','Barely Used', 'Used','Poor'] %>
 <br>
 
 <%= product_form.label :brand %>
@@ -35,5 +37,7 @@
 <%= product_form.label :original_price %>
 <%= product_form.number_field :original_price, step: 0.01 %>
 <br>
-
+<%= product_form.label :photo %>
+<%= product_form.file_field :photo %>
+<br>
 <%= product_form.submit %>
