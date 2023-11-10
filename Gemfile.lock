@@ -52,6 +52,12 @@ GEM
     activejob (7.1.1)
       activesupport (= 7.1.1)
       globalid (>= 0.3.6)
+    activemerchant (1.133.0)
+      activesupport (>= 4.2)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (>= 0.6.9)
+      nokogiri (~> 1.4)
+      rexml (~> 3.2.5)
     activemodel (7.1.1)
       activesupport (= 7.1.1)
     activerecord (7.1.1)
@@ -304,6 +310,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activemerchant
   bootsnap
   capybara
   cucumber-rails

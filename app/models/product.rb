@@ -24,6 +24,7 @@ class Product < ApplicationRecord
   end
 
   def discount?
+    return unless !price.nil? && !original_price.nil?
     return 0 if price >= original_price
 
     ((original_price - price) / original_price * 100).round(2)
