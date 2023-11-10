@@ -50,6 +50,8 @@ gem 'rspec'
 gem 'rspec-rails'
 gem 'simplecov', require: false
 
+gem 'activemerchant'
+
 group :test do
   gem 'capybara'
 end
