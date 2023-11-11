@@ -29,14 +29,22 @@ class ProductsController < ApplicationController
   def add_to_cart
     product = Product.find(params[:id])
     session[:cart] ||= []
-    session[:cart] << product.id
-    flash[:notice] = 'Product successfully added to cart'
+  
+    if session[:cart].include?(product.id)
+      flash[:notice] = 'This product is already in your cart.'
+    else
+      session[:cart] << product.id
+      flash[:notice] = 'Product successfully added to cart.'
+    end
+    
+    redirect_to product_path(product)
     '
     product = Product.find(params[:product_id])
     current_user.cart.products << product
     redirect_to products_path
     '
   end
+
 
   def create
     @product = Product.new(create_update_params)
