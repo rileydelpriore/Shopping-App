@@ -5,10 +5,15 @@ require 'rails_helper'
 RSpec.feature 'IndexRequests', type: :feature do
   context 'default index' do
     before(:each) do
+      use = User.create!(email: "gogogate@colgate.edu", password: "colgate13")
+      visit new_user_session_path
+      fill_in 'Email', with: use.email
+      fill_in 'Password', with: use.password
+      click_button 'Log in'
       Product.create!(description: 'FakeShirt', size: 'L', condition: 'New', brand: 'Target', price: 10.00,
-                      original_price: 20.00, seller: 'Chase')
+                      original_price: 20.00, user: use)
       Product.create!(description: 'FakePants', size: 'M', condition: 'New', brand: 'Target', price: 10.00,
-                      original_price: 20.00, seller: 'Chase')
+                      original_price: 20.00, user: use)
     end
 
     it 'should route correctly from the root' do
@@ -30,12 +35,17 @@ RSpec.feature 'IndexRequests', type: :feature do
 
   context 'sort' do 
     before(:each) do
+      us = User.create!(email: "gogogo@colgate.edu", password: "colgate13")
+      visit new_user_session_path
+      fill_in 'Email', with: us.email
+      fill_in 'Password', with: us.password
+      click_button 'Log in'
       Product.create!(description: 'FakeShirt', size: 'L', condition: 'New', brand: 'Target', price: 10.00,
-                      original_price: 20.00, seller: 'Chase')
+                      original_price: 20.00, user: us)
       Product.create!(description: 'FakePants', size: 'M', condition: 'New', brand: 'Target', price: 20.00,
-                      original_price: 30.00, seller: 'Chase')
+                      original_price: 30.00,  user: us)
       Product.create!(description: 'FakeDress', size: 'S', condition: 'New', brand: 'Target', price: 60.00,
-                      original_price: 100.00, seller: 'Chase')
+                      original_price: 100.00,  user: us)
     end
     it "should sort by price: low to high" do
       visit products_path(sort_by: 'Price: Low to High')

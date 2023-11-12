@@ -5,8 +5,9 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   context 'check attributes and methods' do
     it 'should be able to create a Product object which has the correct methods on it' do
+      user3 = User.create!(email: "l@colgate.edu", password: "password")
       p = Product.create!(description: 'Plain white t-shirt', size: 'L', condition: 'New', brand: 'Target',
-                          price: 10.00, original_price: 20.00, seller: 'Chase')
+                          price: 10.00, original_price: 20.00, user: user3)
       expect(p).to respond_to :description
       expect(p).to respond_to :size
       expect(p).to respond_to :condition
@@ -61,13 +62,15 @@ RSpec.describe Product, type: :model do
 
   context 'the discount? method' do
     it 'should exist' do
+      user2 = User.create!(email: "m@colgate.edu", password: "password")
       p = Product.create!(description: 'Plain white t-shirt', size: 'L', condition: 'New', brand: 'Target',
-                          price: 10.00, original_price: 20.00, seller: 'Chase')
+                          price: 10.00, original_price: 20.00, user: user2)
       expect(p).to respond_to(:discount?)
     end
     it 'should return the discount the seller is offering' do
+      user = User.create!(email: "t@colgate.edu", password: "password")
       p = Product.create!(description: 'Plain white t-shirt', size: 'L', condition: 'New', brand: 'Target',
-                          price: 10.00, original_price: 20.00, seller: 'Chase')
+                          price: 10.00, original_price: 20.00, user: user)
       expect(p.discount?).to eq(50)
     end
 

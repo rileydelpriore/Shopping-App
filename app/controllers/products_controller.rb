@@ -2,6 +2,7 @@
 
 # Controller for clothing products
 class ProductsController < ApplicationController
+ # before_action :authenticate_user!
   def index
     @products = Product.all
     if session[:sort_by].present? || params[:sort_by].present?
@@ -46,8 +47,8 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(create_update_params)
-
+    # @product = Product.new(create_update_params)
+    @product = current_user.products.build(create_update_params)
     @product.photo.attach(params[:product][:photo]) if params[:product][:photo].present?
 
     if @product.save
