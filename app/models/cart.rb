@@ -1,3 +1,4 @@
+# class Cart < ApplicationRecord
 class Cart < ApplicationRecord
   belongs_to :user
   has_one :checkout

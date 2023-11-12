@@ -4,7 +4,7 @@
 class Product < ApplicationRecord
   has_one :cart_product
   has_one :cart, through: :cart_products
-  
+
   validates :description, :size, :condition, :brand, :price, :original_price, presence: true
 
   has_one_attached :photo

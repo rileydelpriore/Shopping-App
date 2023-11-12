@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 
 
 gem 'activemerchant'
+gem 'devise'
 
 group :test do
   gem 'capybara'
