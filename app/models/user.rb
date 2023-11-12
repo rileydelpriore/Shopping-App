@@ -2,6 +2,7 @@
 class User < ApplicationRecord
   has_one :cart
   has_one :checkout, through: :cart
+  has_many :products
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :email, presence: true,
