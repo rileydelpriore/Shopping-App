@@ -9,6 +9,20 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
+  <nav class="navbar navbar-light bg-light">
+  <ul class="navbar-nav ml-auto">
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger", form_class: "nav-link" %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= button_to "Sign In", new_user_session_path, class: "btn btn-primary", form_class: "nav-link" %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
+
   <section id="flash" class="container">
   <% if flash[:notice] %>
   <div class="alert alert-primary">
