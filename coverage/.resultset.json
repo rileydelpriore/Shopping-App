@@ -234,60 +234,8 @@
           null,
           null
         ]
-      },
-      "/Users/rileydelpriore/Documents/Software Engineering/clothing-project/app/channels/application_cable/channel.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/rileydelpriore/Documents/Software Engineering/clothing-project/app/channels/application_cable/connection.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/rileydelpriore/Documents/Software Engineering/clothing-project/app/jobs/application_job.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/rileydelpriore/Documents/Software Engineering/clothing-project/app/mailers/application_mailer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1699905304
+    "timestamp": 1699905790
   }
 }
