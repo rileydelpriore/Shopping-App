@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/features/add_to_cart_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/features/add_to_cart_spec.rb": {
         "lines": [
           1,
           null,
@@ -47,7 +47,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/rails_helper.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/rails_helper.rb": {
         "lines": [
           null,
           null,
@@ -116,7 +116,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/environment.rb": {
+      "/Users/chasecmaylo/clothing-project/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -127,7 +127,7 @@
           1
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/application.rb": {
+      "/Users/chasecmaylo/clothing-project/config/application.rb": {
         "lines": [
           null,
           null,
@@ -175,7 +175,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/boot.rb": {
+      "/Users/chasecmaylo/clothing-project/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -185,7 +185,7 @@
           1
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/environments/test.rb": {
+      "/Users/chasecmaylo/clothing-project/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -259,7 +259,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/assets.rb": {
+      "/Users/chasecmaylo/clothing-project/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -277,7 +277,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/content_security_policy.rb": {
+      "/Users/chasecmaylo/clothing-project/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -288,358 +288,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/devise.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/inflections.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -659,7 +307,359 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/initializers/permissions_policy.rb": {
+      "/Users/chasecmaylo/clothing-project/config/initializers/devise.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chasecmaylo/clothing-project/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/chasecmaylo/clothing-project/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chasecmaylo/clothing-project/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -677,7 +677,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/config/routes.rb": {
+      "/Users/chasecmaylo/clothing-project/config/routes.rb": {
         "lines": [
           null,
           null,
@@ -705,7 +705,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/user.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/user.rb": {
         "lines": [
           null,
           1,
@@ -723,7 +723,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/application_record.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -733,7 +733,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/helpers/application_helper.rb": {
+      "/Users/chasecmaylo/clothing-project/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -742,7 +742,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/helpers/products_helper.rb": {
+      "/Users/chasecmaylo/clothing-project/app/helpers/products_helper.rb": {
         "lines": [
           null,
           null,
@@ -751,7 +751,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/features/create_destroy_product_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/features/create_destroy_product_spec.rb": {
         "lines": [
           1,
           null,
@@ -821,7 +821,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/features/devise_auth_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/features/devise_auth_spec.rb": {
         "lines": [
           1,
           null,
@@ -894,7 +894,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/features/index_request_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/features/index_request_spec.rb": {
         "lines": [
           null,
           null,
@@ -970,7 +970,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/features/show_request_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/features/show_request_spec.rb": {
         "lines": [
           null,
           null,
@@ -1019,7 +1019,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/models/cart_product_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/models/cart_product_spec.rb": {
         "lines": [
           1,
           null,
@@ -1028,7 +1028,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/cart_product.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/cart_product.rb": {
         "lines": [
           null,
           1,
@@ -1037,7 +1037,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/models/cart_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/models/cart_spec.rb": {
         "lines": [
           1,
           null,
@@ -1077,7 +1077,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/cart.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/cart.rb": {
         "lines": [
           null,
           1,
@@ -1103,7 +1103,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/models/checkout_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/models/checkout_spec.rb": {
         "lines": [
           1,
           null,
@@ -1112,7 +1112,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/checkout.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/checkout.rb": {
         "lines": [
           null,
           1,
@@ -1120,7 +1120,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/models/product_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/models/product_spec.rb": {
         "lines": [
           null,
           null,
@@ -1203,7 +1203,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/models/product.rb": {
+      "/Users/chasecmaylo/clothing-project/app/models/product.rb": {
         "lines": [
           null,
           null,
@@ -1251,7 +1251,7 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/spec/models/user_spec.rb": {
+      "/Users/chasecmaylo/clothing-project/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1260,14 +1260,14 @@
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/controllers/application_controller.rb": {
+      "/Users/chasecmaylo/clothing-project/app/controllers/application_controller.rb": {
         "lines": [
           null,
           1,
           null
         ]
       },
-      "/Users/anniebaldwin/Desktop/COSC415_Homework/Project/clothing-project/app/controllers/products_controller.rb": {
+      "/Users/chasecmaylo/clothing-project/app/controllers/products_controller.rb": {
         "lines": [
           null,
           null,
@@ -1340,6 +1340,6 @@
         ]
       }
     },
-    "timestamp": 1699898463
+    "timestamp": 1699904820
   }
 }

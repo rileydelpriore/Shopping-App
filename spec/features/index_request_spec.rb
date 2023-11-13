@@ -18,12 +18,12 @@ RSpec.feature 'IndexRequests', type: :feature do
 
     it 'should route correctly from the root' do
       visit '/'
-      expect(page.text).to match(/L.*M/)
+      expect(page.text).to match(/.*L.*M.*\$.*/m)
     end
 
    it 'should show products with default sort order' do
       visit products_path
-      expect(page.text).to match(/L.*M/)
+      expect(page.text).to match(/.*L.*M.*\$.*/m)
     end
 
     # it 'should contain a link from product name to its show page' do
@@ -49,23 +49,23 @@ RSpec.feature 'IndexRequests', type: :feature do
     end
     it "should sort by price: low to high" do
       visit products_path(sort_by: 'Price: Low to High')
-      expect(page.text).to match /10.00.*20.00.*60.00/
+      expect(page.text).to match  /.*\$10\.00.*\$20\.00.*\$60\.00/m
     end
     it "should sort by price: high to low" do
       visit products_path(sort_by: "Price: High to Low")
-      expect(page.text).to match /60.00.*20.00.*10.00/
+      expect(page.text).to match /.*\$60\.00.*\$20\.00.*\$10\.00/m
     end
     it "should sort by size: small to large" do
       visit products_path(sort_by: 'Size: Small to Large')
-      expect(page.text).to match /S.*M.*L/
+      expect(page.text).to match /.*S.*M.*L.*\$.*/m
     end
     it "should sort by size: small to large" do
       visit products_path(sort_by: 'Size: Large to Small')
-      expect(page.text).to match /L.*M.*S/
+      expect(page.text).to match /.*L.*M.*S.*\$.*/m
     end
     it "should sort by newest product added" do
       visit products_path(sort_by: 'Newest')
-      expect(page.text).to match /60.00.*20.00.*10.00/
+      expect(page.text).to match /S\s*\$60\.00\s*M\s*\$20\.00\s*L\s*\$10\.00/
     end
 
   end
