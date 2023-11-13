@@ -1,38 +1,38 @@
 
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+<body>
+  <header>
+    <h1>Colgate Off the RAC</h1>
+  </header>
+
 <section id="main" class="container">
   <h2 class="lead">Clothing Available for Purchase</p>
   <%= form_tag products_path, method: :get do %>
     <%= select_tag :sort_by, options_for_select(['Price: Low to High', 'Price: High to Low', 'Size: Small to Large', 'Size: Large to Small', 'Newest'],session[:sort]) %>
     <%= submit_tag 'Sort' %>
   <% end %>
-
-  <table class="table">
-    <% @products.each do |product| %>
-      <tr class="product">
+  <div class="product-grid">
+  <% @products.each do |product| %>
+    <div class="product">
       <% if product.photo.attached? %>
-        <td>
-          <%= link_to product_path(product) do %>
-            <%= image_tag product.photo, class: "product-image" %>
-           <% end %>
-          </td>
-        <% else %>
-          <td>
-          <%= link_to product_path(product) do %>
-            <%= image_tag 'download.png', class: "product-image" %>
-           <% end %>
-          
-         </td>
-        <% end %>
-        <td><%= product.size %>
-        <td><%= number_to_currency(product.price) %>
-        
-      </tr>
-    <% end %>
-  </table>
+        <a href="<%= product_path(product) %>">
+          <%= image_tag product.photo, class: "product-image" %>
+        </a>
+      <% else %>
+        <a href="<%= product_path(product) %>">
+          <%= image_tag 'download.png', class: "product-image" %>
+        </a>
+      <% end %>
+      <p><%= product.size %></p>
+      <p><%= number_to_currency(product.price) %></p>
+    </div>
+  <% end %>
+</div>
   <br>
-   <% if user_signed_in? %>
-      <%= link_to "Add new item", new_product_path, class: "btn btn-secondary"%>
-  <%else %>
-      <%= "Sign in to add to clothing available for purchase" %>
-  <%end%>
+  <%= link_to "Add new item", new_product_path, class: "btn btn-secondary"%>
 </section>
+
+</body>

@@ -13,14 +13,34 @@
  *= require_tree .
  *= require_self
  */
- .product-image {
-    width: 120px;
-  }
+ header {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Dela Gothic One', sans-serif;
+}
 
-  .right-side-image {
-    width: 300px;
-  }
+.lead {
+  font-family: 'Dela Gothic One', sans-serif;
+}
 
-  .right-side {
-    float: right;
-  }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  justify-content: space-evenly; 
+  align-content: space-between; 
+}
+
+.product {
+  border: 1px solid #ddd; 
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
