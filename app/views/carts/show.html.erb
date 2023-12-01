@@ -1,33 +1,36 @@
 <h1>Your Shopping Cart</h1>
 
-<% if @cart_products.any? %>
-    <table class = "table>
-      <% @cart_products.each do |product| %>
-        <tr class="product">
-        <% if product.photo.attached? %>
-          <td>
-            <%= link_to product_path(product) do %>
-              <%= image_tag product.photo, class: "product-image" %>
-             <% end %>
-            </td>
-          <% else %>
-            <td>
-            <%= link_to product_path(product) do %>
-              <%= image_tag 'download.png', class: "product-image" %>
-            <% end %>
-           </td>
-          <% end %>
-          <td><%= product.size %>
-          <td><%= number_to_currency(product.price) %>
-          <td><%= button_to 'Remove', remove_from_cart_cart_path(id: product.id), method: :delete %>
-      </tr>
-    <% end %>
-  </table>
-  <p>Total Price: <%= number_to_currency(@total_price) %></p>
-<% else %>
-  <p>Your cart is empty.</p>
-<% end %>
+<section id="main" class="container">
 
-<br>
-<%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary" %>
-<br>
+  <% if @cart_products.any? %>
+      <table class = "table>
+        <% @cart_products.each do |product| %>
+          <tr class="product">
+          <% if product.photo.attached? %>
+            <td>
+              <%= link_to product_path(product) do %>
+                <%= image_tag product.photo, class: "product-image" %>
+              <% end %>
+              </td>
+            <% else %>
+              <td>
+              <%= link_to product_path(product) do %>
+                <%= image_tag 'download.png', class: "product-image" %>
+              <% end %>
+            </td>
+            <% end %>
+            <td><%= product.size %>
+            <td><%= number_to_currency(product.price) %>
+            <td><%= button_to 'Remove', remove_from_cart_cart_path(product), method: :delete %>
+        </tr>
+      <% end %>
+    </table>
+    <p>Total Price: <%= number_to_currency(@total_price) %></p>
+  <% else %>
+    <p>Your cart is empty.</p>
+  <% end %>
+
+  <br>
+  <%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary" %>
+  <br>
+</section>

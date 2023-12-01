@@ -2,7 +2,7 @@
 
 # Controller for clothing products
 class ProductsController < ApplicationController
- # before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @products = Product.all
     if session[:sort_by].present? || params[:sort_by].present?
@@ -25,25 +25,6 @@ class ProductsController < ApplicationController
     @product.destroy
     flash[:notice] = 'Product successfully deleted'
     redirect_to products_path
-  end
-
-  def add_to_cart
-    product = Product.find(params[:id])
-    session[:cart] ||= []
-
-    if session[:cart].include?(product.id)
-      flash[:notice] = 'This product is already in your cart.'
-    else
-      session[:cart] << product.id
-      flash[:notice] = 'Product successfully added to cart.'
-    end
-
-    redirect_to product_path(product)
-    '
-    product = Product.find(params[:product_id])
-    current_user.cart.products << product
-    redirect_to products_path
-    '
   end
 
   def create
