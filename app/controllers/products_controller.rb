@@ -21,14 +21,13 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    flash[:notice] = 'Product successfully deleted'
-    redirect_to products_path
+      @product = Product.find(params[:id])
+      @product.destroy
+      flash[:notice] = 'Product successfully deleted'
+      redirect_to products_path
   end
 
   def create
-    # @product = Product.new(create_update_params)
     @product = current_user.products.build(create_update_params)
     @product.photo.attach(params[:product][:photo]) if params[:product][:photo].present?
 
