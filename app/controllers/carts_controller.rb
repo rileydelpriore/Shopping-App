@@ -1,8 +1,8 @@
 # class CartsController < ApplicationController
 class CartsController < ApplicationController
+  before_action :authenticate_user!
   def show
-    @cart = current_user.cart
-    @cart = Cart.create(user: current_user) if @cart.nil?
+    @cart = current_user.cart || Cart.create(user: current_user)
     @total_price = @cart.products.sum('price')
     @cart_products = @cart.products
   end
