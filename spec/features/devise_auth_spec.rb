@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Devise authentication', type: :feature do
     it 'can let a user sign in happy path' do 
-        user = User.create(email: 'test@colgate.edu', password: 'password')
+       user = User.create(email: 'test@colgate.edu', password: 'password')
        visit new_user_session_path 
        fill_in 'Email', with: "test@colgate.edu"
        fill_in 'Password', with: "password"

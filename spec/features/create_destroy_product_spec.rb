@@ -62,5 +62,19 @@ RSpec.feature "Newcreates", type: :feature do
       click_on "Delete"
       expect(page).to have_content('Product successfully deleted')
     end
+    it 'should not delete a product when current user did not upload product' do
+      users = User.create!(email: "gogogate@colgate.edu", password: "colgate13")
+      user_who_created = User.create!(email: "abald@colgate.edu", password: "colgate13gogatewoohoo")
+      visit new_user_session_path
+      fill_in 'Email', with: users.email
+      fill_in 'Password', with: users.password
+      click_button 'Log in'
+      p = Product.create!(description: 'FakeShirt', size: 'L', condition: 'New', brand: 'Target', price: 10.00,
+                        original_price: 20.00, user: user_who_created)
+      visit product_path(p)
+      click_on "Delete"
+      expect(page).to have_content('You are not authorized to delete this product.')
+    end
+
   end
 end

@@ -2,7 +2,7 @@
 
 # Controller for clothing products
 class ProductsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new]
   def index
     @products = Product.all
     if session[:sort_by].present? || params[:sort_by].present?
@@ -21,10 +21,15 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-      @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
+
+    if @product.user == current_user
       @product.destroy
       flash[:notice] = 'Product successfully deleted'
-      redirect_to products_path
+    else
+      flash[:alert] = 'You are not authorized to delete this product.'
+    end
+    redirect_to products_path
   end
 
   def create
