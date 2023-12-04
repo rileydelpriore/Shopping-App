@@ -16,7 +16,7 @@ RSpec.feature 'Add to Cart feature', type: :feature do
             click_button 'Add to Cart'
             expect(page).to have_content('Product successfully added to cart.')
         end
-      end
+    end
 
     context "create sad path" do
         it 'should not add the item multiple times into the cart' do
@@ -46,28 +46,6 @@ RSpec.feature 'Add to Cart feature', type: :feature do
             click_button 'Add to Cart'
             expect(page).to have_content('Sign In')
         end
-
     end
-
-
-        it 'should not allow you to add if user is not signed in' do 
-            user = User.create(email: 'test@colgate.edu', password: 'password')
-            cart = user.cart || Cart.create(user: user)
-            product = Product.create(description: 'FakeShirt', size: 'L', condition: 'New', brand: 'Target', price: 10.00,
-            original_price: 20.00, user: user)
-            visit product_path(product)
-            expect(page).to have_content "FakeShirt"
-            click_button 'Add to Cart'
-            expect(page).to have_content('Sign In')
-        end
-
-
-    end
-
-
-
 end
 
-
-
-end
