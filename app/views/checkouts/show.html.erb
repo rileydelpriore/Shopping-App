@@ -1,0 +1,23 @@
+<section id="main" class="container">
+  <div class="container">
+
+  <%# in app/views/ckeckouts/show.html.erb %>
+  <%= form_with model: @checkout do |checkout_form| %>
+
+  <%= render partial: 'form_template', locals: {checkout_form: checkout_form} %>
+
+  <% end %>
+  </div>
+
+  <br>
+  <%= button_to "Place Order", checkout_checkout_path, method: :get, class: "btn btn-primary" %>
+  <br>
+
+  <br>
+  <%= button_to "Back to Products", products_path, method: :get, class: "btn btn-primary" %>
+  <br>
+
+  <br> 
+  <%= button_to "Back to Cart", cart_path, method: :get, class: "btn btn-primary" %>
+  <br>
+</section>

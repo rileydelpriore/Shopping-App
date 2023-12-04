@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_29_204226) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_191307) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -65,6 +65,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_29_204226) do
     t.decimal "total", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cart_id"
+    t.index ["cart_id"], name: "index_checkouts_on_cart_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -103,5 +105,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_29_204226) do
   add_foreign_key "cart_products", "carts"
   add_foreign_key "cart_products", "products"
   add_foreign_key "carts", "users"
+  add_foreign_key "checkouts", "carts"
   add_foreign_key "products", "users"
 end

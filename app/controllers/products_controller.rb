@@ -33,7 +33,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    # @product = Product.new(create_update_params)
     @product = current_user.products.build(create_update_params)
     @product.photo.attach(params[:product][:photo]) if params[:product][:photo].present?
 
