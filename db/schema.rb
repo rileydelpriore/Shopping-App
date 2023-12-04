@@ -39,15 +39,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_29_204226) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "cart_products", force: :cascade do |t|
-    t.integer "cart_id", null: false
-    t.integer "product_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_cart_products_on_cart_id"
-    t.index ["product_id"], name: "index_cart_products_on_product_id"
-  end
-
   create_table "carts", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -100,8 +91,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_29_204226) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "cart_products", "carts"
-  add_foreign_key "cart_products", "products"
   add_foreign_key "carts", "users"
   add_foreign_key "products", "users"
 end
