@@ -48,3 +48,4 @@ RSpec.feature 'Add to Cart feature', type: :feature do
         end
     end
 end
+
