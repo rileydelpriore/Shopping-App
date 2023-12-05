@@ -1,30 +1,30 @@
 
+<head>
+<%= stylesheet_link_tag 'application' %>
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 <body>
   <header>
     <h1>Colgate Off the RAC</h1>
   </header>
 
-<section id="main" class="container">
+<section id="main1" class="container">
   <h2 class="lead">Clothing Available for Purchase</p>
   <%= form_tag products_path, method: :get do %>
     <%= select_tag :sort_by, options_for_select(['Price: Low to High', 'Price: High to Low', 'Size: Small to Large', 'Size: Large to Small', 'Newest'],session[:sort]) %>
     <%= submit_tag 'Sort' %>
   <% end %>
+
   <div class="product-grid">
   <% @products.each do |product| %>
     <div class="product">
       <% if product.photo.attached? %>
-        <a href="<%= product_path(product) %>">
-          <%= image_tag product.photo, class: "product-image" %>
-        </a>
+        <%= link_to product_path(product) do %>
+          <%= image_tag product.photo, class: "img-fluid homepage-image" %>
+        <% end %>
       <% else %>
-        <a href="<%= product_path(product) %>">
-          <%= image_tag 'download.png', class: "product-image" %>
-        </a>
+        <%= link_to product_path(product) do %>
+          <%= image_tag 'download.png', class: "img-fluid homepage-image" %>
+        <% end %>
       <% end %>
       <p><%= product.size %></p>
       <p><%= number_to_currency(product.price) %></p>
