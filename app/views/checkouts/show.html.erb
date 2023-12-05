@@ -10,15 +10,18 @@
   <% end %>
   </div>
 
+  <div class="checkout-button-container">
+
   <br>
-  <%= button_to "Place Order", checkout_checkout_path, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Place Order", checkout_checkout_path, method: :get, class: "btn btn-primary checkout-action-btn" %>
   <br>
 
   <br>
-  <%= button_to "Back to Products", products_path, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Back to Products", products_path, method: :get, class: "btn btn-primary checkout-action-btn" %>
   <br>
 
   <br> 
-  <%= button_to "Back to Cart", cart_path, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Back to Cart", cart_path, method: :get, class: "btn btn-primary checkout-action-btn" %>
   <br>
+  </div>
 </section>

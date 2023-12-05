@@ -13,11 +13,18 @@
  *= require_tree .
  *= require_self
  */
- header {
+
+ @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+header {
   background-color: maroon;
   color: white;
   text-align: center;
   padding: 20px;
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+body {
   font-family: 'Dela Gothic One', sans-serif;
 }
 
@@ -39,8 +46,131 @@
   text-align: center;
 }
 
+
+
+.sign-btn {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  color: maroon;
+  border: 1px solid black;
+
+}
+
+.sign-btn {
+  position: absolute;
+  top: 10px; 
+  left: 20px;
+}
+
+.checkout-button-container {
+  position: fixed;
+  bottom: 150px; /* Adjust as needed to position the container from the bottom */
+  left: 25px; /* Adjust as needed to position the container from the left */
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkout-action-btn {
+  font-size: 15px; /* Adjust the font size as needed */
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+.checkout-action-btn {
+  font-family: 'Dela Gothic One', sans-serif;
+  background-color: white;
+  color: maroon;
+  border: 1px solid black;
+}
+
+.product-button-container {
+  position: fixed;
+  bottom: 5px; /* Adjust as needed to position the container from the bottom */
+  left: 25px; /* Adjust as needed to position the container from the left */
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-action-btn {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 8px 13px;
+  margin-right: 10px;
+}
+
+.product-action-btn {
+  font-family: 'Dela Gothic One', sans-serif;
+  background-color: white;
+  color: maroon;
+  border: 1px solid black;
+}
+
+.cart-action-btn {
+  font-family: 'Dela Gothic One', sans-serif;
+  background-color: white;
+  color: maroon;
+  border: 1px solid black;
+}
+
+.cart-action-btn {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 8px 13px;
+  margin-right: 10px;
+}
+
+.total-price {
+  margin-right: 10px;
+  text-align: right;
+  
+
+}
+
+#main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -20px;
+
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt, dd {
+  margin: 0;
+  padding: 5px;
+}
+
+/* Style each category to be on a new line */
+dt {
+  clear: left;
+  font-weight: bold;
+}
+
+.right-side {
+  flex: 1;
+  text-align: right; /* Align the content to the right within the right-side container */
+  margin-right: 200px; /* Adjust the margin as needed to move the content more right */
+}
+
+.homepage-image {
+  max-width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+}
+
+
 .product-image {
   max-width: 100%;
-  height: 200px;
+  height: 500px; 
+  width: 400px;
   object-fit: cover; 
 }
