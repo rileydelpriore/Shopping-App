@@ -4,7 +4,7 @@
 
 <section id="main" class="container">
 <div class="left-side">
-  <h4 class="lead">Product details </h4>
+  <h4>Product details </h4>
   <dl>
     <dt>Size
       <dd><%= @product.size %>
@@ -32,11 +32,12 @@
 </section>
 
 
-  <div id="buttons-container">
-    <%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary btn-container" %>
-    <%= button_to "Delete this product", product_path(@product), method: :delete, class: "btn btn-danger btn-container" %>
-    <%= button_to 'Add to Cart', add_to_cart_cart_path(@product), method: :post, class: "btn btn-success btn-container" %>
-    <%= link_to 'View Cart', cart_path, class: "btn btn-info btn-container" %>
+<div class="product-button-container">
+    <%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary product-action-btn" %>
+    <%= button_to "Delete this product", product_path(@product), method: :delete, class: "btn btn-danger product-action-btn" %>
+    <%= button_to 'Add to Cart', add_to_cart_cart_path(@product), method: :post, class: "btn btn-success product-action-btn" %>
+    <%= button_to 'View Cart', cart_path, method: :get, class: "btn btn-info product-action-btn" %>
+
   </div>
 </section>
 
