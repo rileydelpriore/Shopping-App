@@ -14,6 +14,13 @@
     <%= select_tag :sort_by, options_for_select(['Price: Low to High', 'Price: High to Low', 'Size: Small to Large', 'Size: Large to Small', 'Newest'],session[:sort]) %>
     <%= submit_tag 'Sort' %>
   <% end %>
+  <%= form_tag products_path, method: :get do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by description" %>
+    <%= submit_tag 'Search' %>
+    <% if params[:search].present? %>
+    <%= button_to 'Clear Search', products_path(search: nil), method: :get, class: 'btn btn-secondary' %>
+    <% end %>
+  <% end %>
   <div class="product-grid">
   <% @products.each do |product| %>
     <div class="product">
