@@ -52,7 +52,7 @@ RSpec.feature 'ShowRequests', type: :feature do
     it 'should clear search results' do 
       fill_in 'Search by description', with: 'shirt'
       click_button 'Search'
-      click_button 'Clear Search'
+      click_link 'Clear Search'
       expect(page).to have_current_path(products_path)
     end
   end
