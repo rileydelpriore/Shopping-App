@@ -1,4 +1,4 @@
-<h2>Delivery Information</h2>
+<h3>Delivery Information</h3>
 
   <div>
     <%= checkout_form.label :first_name %>
@@ -22,6 +22,15 @@
   </div>
 
   <div>
+    <%= checkout_form.label :state %>
+    <%= checkout_form.select :state, ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 
+                                      'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 
+                                      'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 
+                                      'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 
+                                      'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'] %>
+  </div>
+
+  <div>
     <%= checkout_form.label :zip_code %>
     <%= checkout_form.text_field :zip_code %>
   </div>
@@ -36,11 +45,11 @@
     <%= checkout_form.select :delivery_method, ['Standard Shipping', 'Express Shipping', 'Pickup'] %>
   </div>
 
-  <h2>Payment Information</h2>
+  <h3>Payment Information</h3>
 
   <div>
-    <%= checkout_form.label :first_name %>
-    <%= checkout_form.text_field :first_name %>
+    <%= checkout_form.label :card_holder %>
+    <%= checkout_form.text_field :card_holder %>
   </div>
 
   <div>

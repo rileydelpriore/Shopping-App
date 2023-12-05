@@ -9,7 +9,7 @@ class CartsController < ApplicationController
 
   def add_to_cart
     product = Product.find(params[:product_id])
-    cart = current_user.cart
+    cart = current_user.cart || Cart.create(user: current_user)
     if cart.products.include?(product)
       flash[:notice] = 'This product is already in your cart.'
     else

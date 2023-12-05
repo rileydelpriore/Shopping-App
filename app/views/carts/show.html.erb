@@ -25,7 +25,11 @@
         </tr>
       <% end %>
     </table>
+
     <p class = "total-price">Total Price: <%= number_to_currency(@total_price) %></p>
+    <br> 
+    <%= button_to "Checkout", show_checkout_path, method: :get, class: "btn btn-primary" %>
+    <br>
   <% else %>
     <p>Your cart is empty.</p>
   <% end %>
@@ -33,6 +37,7 @@
   <br>
   <%= button_to "Back to Products", products_path, method: :get, class: "btn cart-action-btn" %>
   <br>
+
 
   <br> 
   <%= button_to "Checkout", show_checkout_path, method: :get, class: "btn cart-action-btn" %>

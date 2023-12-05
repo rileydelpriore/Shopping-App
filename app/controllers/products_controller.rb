@@ -9,6 +9,10 @@ class ProductsController < ApplicationController
       session[:sort_by] = params[:sort_by] || session[:sort_by]
       @products = Product.sorted_by(session[:sort_by])
     end
+
+    if params[:search].present?
+      @products = @products.where('lower(description) LIKE ?', "%#{params[:search].downcase}%")
+    end
     @products
   end
 

@@ -17,8 +17,8 @@ RSpec.feature 'ShowRequests', type: :feature do
     end
     it "should have a link back to the index" do
       visit product_path(1)
-      expect(page.text).to match /Back to products list/
-      click_on "Back to products list"
+      expect(page.text).to match /Back to Products/
+      click_on "Back to Products"
       expect(page.current_path).to eq(products_path)
     end
 
@@ -41,5 +41,20 @@ RSpec.feature 'ShowRequests', type: :feature do
       click_on "Delete this product"
       expect(page).to have_current_path(products_path)
     end
+
+    it 'should show results for search' do 
+      fill_in 'Search by description', with: 'shirt'
+       click_button 'Search'
+       expect(page.text).to match(/10\.00/)
+       expect(page.text).to match(/L/)
+    end
+
+    it 'should clear search results' do 
+      fill_in 'Search by description', with: 'shirt'
+      click_button 'Search'
+      click_link 'Clear Search'
+      expect(page).to have_current_path(products_path)
+    end
   end
+
 end
