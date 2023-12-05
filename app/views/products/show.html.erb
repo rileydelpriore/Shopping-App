@@ -33,7 +33,7 @@
 
 
 <div class="product-button-container">
-    <%= button_to "Back to products list", products_path, method: :get, class: "btn btn-primary product-action-btn" %>
+    <%= button_to "Back to Products", products_path, method: :get, class: "btn btn-primary product-action-btn" %>
     <%= button_to "Delete this product", product_path(@product), method: :delete, class: "btn btn-danger product-action-btn" %>
     <%= button_to 'Add to Cart', add_to_cart_cart_path(@product), method: :post, class: "btn btn-success product-action-btn" %>
     <%= button_to 'View Cart', cart_path, method: :get, class: "btn btn-info product-action-btn" %>

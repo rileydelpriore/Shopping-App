@@ -21,6 +21,7 @@
     <%= link_to 'Clear Search', products_path, class: 'btn btn-secondary' %>
     <% end %>
   <% end %>
+  <br>
   <div class="product-grid">
   <% @products.each do |product| %>
     <div class="product">
@@ -42,7 +43,7 @@
   <%= button_to "Add new item", new_product_path, method: :get, class: "btn btn-secondary product-action-btn" %>
 
   <br>
-  <%= link_to 'View Cart', cart_path %>
+  <%= button_to 'View Cart', cart_path, method: :get, class: "btn btn-info product-action-btn" %>
 
 </section>
 

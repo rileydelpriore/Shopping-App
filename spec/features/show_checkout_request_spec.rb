@@ -18,7 +18,7 @@ RSpec.describe Checkout, type: :feature do
         click_button 'Add to Cart'
         expect(page).to have_content('Product successfully added to cart.')
 
-        click_link 'View Cart'
+        click_button 'View Cart'
         visit cart_path
         expect(page).to have_content('Total Price: $10')
 
@@ -42,7 +42,7 @@ RSpec.describe Checkout, type: :feature do
 
         click_button 'Place Order'
         visit checkout_checkout_path
-        expect(page).to have_content('Order Successful')
+        expect(page).to have_content('Order Successful!')
         expect(user.reload.cart.products).to be_empty
     end
 
