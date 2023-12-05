@@ -41,5 +41,20 @@ RSpec.feature 'ShowRequests', type: :feature do
       click_on "Delete this product"
       expect(page).to have_current_path(products_path)
     end
+
+    it 'should show results for search' do 
+      fill_in 'Search by description', with: 'shirt'
+       click_button 'Search'
+       expect(page.text).to match(/10\.00/)
+       expect(page.text).to match(/L/)
+    end
+
+    it 'should clear search results' do 
+      fill_in 'Search by description', with: 'shirt'
+      click_button 'Search'
+      click_button 'Clear Search'
+      expect(page).to have_current_path(products_path)
+    end
   end
+
 end
